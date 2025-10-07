@@ -64,10 +64,3 @@ CSV files are written to the chosen folder:
 * `bars_5m.csv` → `open, high, low, close, volume, vwap, ma_30m, median_15m`
 * `bars_30m.csv` → `open, high, low, close, volume, vwap, ma_30m, median_15m`
 * `bars_1d.csv` → `open, high, low, close, volume` (no VWAP or rolling metrics)
-
----
-
-## Notes
-
-* Time window strings use modern forms (`"5min"`, `"30min"`) to avoid deprecated aliases.
-* Design favors speed: NumPy vectorization + `pandas.resample`/`rolling`.
